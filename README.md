@@ -10,14 +10,14 @@ The script is a crawler for Espoo (a municipality next to Helsinki, Finland) doc
 
 Clone the repository to your server. Create a init.json file in the root, containing the following fields:
 
-´´´
+```
 {
 'target_url' : 'which_url_to_look_at',
 'slug' : 'data_folder_for_document_storing',
 'recipients' : ['list_of', 'emails_for', 'recipients']
 'admin' : 'email_of_administrator'
 }
-´´´
+```
 
 Set the _process_all_meetings.php_ file to be run at specified times, eg. daily at 9am. The script will crawl through the document database and check for any new documents. Note that for the first time the script will send email for all of the documents, as they are considered new. Consider runnin the first passes with a recipient email address that can expect some 200 new emails.
 
